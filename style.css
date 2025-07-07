@@ -1,4 +1,4 @@
-:root {
+css -:root {
   --bg-dark: #121926;
   --bg-light: #f4f7fa;
   --text-dark: #f4f7fa;
@@ -125,4 +125,22 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
   }
+}
+
+/* Maintenance banner styles */
+.maintenance-banner {
+  background-color: #ff4d4f;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: default;
 }
