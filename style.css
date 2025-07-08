@@ -1,8 +1,8 @@
-  -:root {
+:root {
   --bg-dark: #121926;
   --bg-light: #f4f7fa;
   --text-dark: #f4f7fa;
-  --text-light: #03cffc;
+  --text-light: #222b3a;
   --accent: #00cfff;
   --card: #222b3a;
   --shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -24,7 +24,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+  background: var(--bg, #f4f7fa);
   color: var(--text);
   min-height: 100vh;
   transition: background 0.2s, color 0.2s;
@@ -100,7 +100,7 @@ main {
   text-decoration: none;
   margin-top: 1.2rem;
   box-shadow: 0 1px 8px #00cfff55;
-  transition: background 0.2s;
+  transition: background 0.2s, opacity 0.2s;
 }
 
 .cta:hover {
@@ -143,4 +143,5 @@ footer {
   pointer-events: none;
   opacity: 0.6;
   cursor: default;
+  /* Do not set display: none or visibility: hidden! */
 }
