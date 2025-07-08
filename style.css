@@ -25,15 +25,15 @@ body {
   align-items: center;
   position: relative;
   z-index: 10;
-  min-height: 56px;
+  min-height: 72px; /* Match button height */
 }
 
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 64px;   /* Increased from 54px */
-  height: 64px;  /* Increased from 54px */
+  width: 72px;
+  height: 72px;
   background: none;
   border: none;
   cursor: pointer;
@@ -43,16 +43,16 @@ body {
 
 .hamburger span {
   display: block;
-  width: 36px;    /* Wider bars */
-  height: 4px;    /* Thicker bars */
+  width: 42px;
+  height: 5px;
   background: var(--primary);
-  margin: 6px 0;  /* More spacing */
+  margin: 8px 0;
   border-radius: 2px;
   transition: 0.3s;
 }
 
 .hamburger.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -60,12 +60,12 @@ body {
 }
 
 .hamburger.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .nav-menu {
   position: absolute;
-  top: 64px;
+  top: 72px;
   left: 0;
   width: 100%;
   background: var(--feature-bg);
