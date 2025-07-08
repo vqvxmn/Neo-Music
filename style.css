@@ -32,8 +32,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 64px;   /* Increased from 54px */
+  height: 64px;  /* Increased from 54px */
   background: none;
   border: none;
   cursor: pointer;
@@ -43,10 +43,10 @@ body {
 
 .hamburger span {
   display: block;
-  width: 28px;
-  height: 3px;
+  width: 36px;    /* Wider bars */
+  height: 4px;    /* Thicker bars */
   background: var(--primary);
-  margin: 4px 0;
+  margin: 6px 0;  /* More spacing */
   border-radius: 2px;
   transition: 0.3s;
 }
@@ -65,7 +65,7 @@ body {
 
 .nav-menu {
   position: absolute;
-  top: 56px;
+  top: 64px;
   left: 0;
   width: 100%;
   background: var(--feature-bg);
