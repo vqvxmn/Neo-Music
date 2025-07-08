@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terms of Service - Neo Music</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/tos" class="nav-link nav-link-active">ToS</a>
+    </div>
+  </nav>
+  <header>
+    <img id="logo" src="https://cdn.discordapp.com/attachments/1388260210199629856/1391829899450388541/IMG_1938.png" alt="NeoWorks Logo" />
+    <h1>Terms of Service for Neo Music</h1>
+    <p class="tos-date">Last Updated: 7/8/25</p>
+  </header>
+  <main>
+    <section>
+      <p>
+        Welcome to Neo Music, a Discord bot designed to enhance your server with music streaming capabilities. By using this bot, you agree to the following terms:
+      </p>
+      <p>
+        By inviting or interacting with Neo Music, you agree to these Terms of Service and the Privacy Policy. If you do not agree, please remove the bot from your server.
+      </p>
+      <p>
+        This bot allows users to stream audio, manage playback (play, pause, skip, queue), and customize commands at the server level. Features may change at any time without prior notice.
+      </p>
+      <p>
+        You may not use this bot to infringe copyright, distribute pirated content, spam, harass others, or violate <a href="https://discord.com/guidelines" target="_blank">Discord's Community Guidelines</a>. Misuse may result in the bot being removed or usage being restricted.
+      </p>
+      <p>
+        Neo Music may collect non-personal data such as server and user IDs and command usage statistics to operate correctly and improve the service. No personal messages, passwords, or identifiable personal information are stored. See our Privacy Policy for more detail.
+      </p>
+      <p>
+        Use of Neo Music is at your own risk. We are not liable for any damages, disruptions, or losses incurred through its usage.
+      </p>
+      <p>
+        For support or inquiries, contact us at <a href="mailto:vqvxmn@gmail.com">vqvxmn@gmail.com</a> or visit our official Discord server through the link at the main page bottom.
+      </p>
+      <a href="/" class="cta" style="margin-top:2rem;display:inline-block;">⬅ Go back</a>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Neo Works. All rights reserved.</p>
+  </footer>
+  <script>
+    // Hamburger menu toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger-btn");
+      const navMenu = document.getElementById("nav-menu");
+      hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("open");
+        hamburger.classList.toggle("open");
+      });
+      // Optional: close menu when clicking outside
+      document.addEventListener("click", function(event) {
+        if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+          navMenu.classList.remove("open");
+          hamburger.classList.remove("open");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
