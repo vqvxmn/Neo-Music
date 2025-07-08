@@ -13,32 +13,38 @@
   <meta property="og:type" content="website" />
 </head>
 <body>
-  <div
-    id="maintenance-banner"
-    class="maintenance-banner"
-    style="display: none"
-  >
+  <nav class="navbar">
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <a href="index.html" class="nav-link nav-link-active">Home</a>
+      <a href="tos.html" class="nav-link">ToS</a>
+    </div>
+  </nav>
+
+  <div id="maintenance-banner" class="maintenance-banner" style="display: none">
     🔴 The Bot is currently under maintenance and cannot be invited. Please check back later!
   </div>
+
   <header>
-    <img
-      id="logo"
-      src="https://cdn.discordapp.com/attachments/1388260210199629856/1391829899450388541/IMG_1938.png?ex=686d521a&is=686c009a&hm=0a244430eecc2a5a28024a500a19c1f482b1fdf593cfa738d0941c71b0cae310"
-      alt="NeoWorks Logo"
-    />
+    <img id="logo" src="https://cdn.discordapp.com/attachments/1388260210199629856/1391829899450388541/IMG_1938.png?ex=686d521a&is=686c009a&hm=0a244430eecc2a5a28024a500a19c1f482b1fdf593cfa738d0941c71b0cae310" alt="NeoWorks Logo" />
     <h1>NeoWorks Music Bot</h1>
     <p>
       The next generation Discord music experience. Enjoy seamless playback,
       powerful commands, and a beautiful UI!
     </p>
   </header>
+
   <main>
     <div class="warning-box">
       <span class="warning-icon">⚠️</span>
       <div>
         <strong>Notice</strong><br>
         This bot is in its earliest stages of development and may have bugs. Please report those.<br>
-        We are actively working on improving the Audio quality. <strong>If you would like to donate to use (any amount you want), then please click the button next to the Invite button.</strong>To clarify, the bot is, and <strong>always will stay</strong>free.<br>
+        We are actively working on improving the Audio quality. <strong>If you would like to donate to us (any amount you want), then please click the button next to the Invite button.</strong> To clarify, the bot is, and <strong>always will stay</strong> free.<br>
       </div>
     </div>
     <section>
@@ -47,9 +53,7 @@
         <li>🎵 High Quality Music Playback</li>
         <li>🔎 Search and Play from YouTube, Spotify, and more</li>
         <li>⚡ Fast, Responsive Commands</li>
-        <li>
-          🔊 Volume, Queue, and Playlist Controls with a customizable DJ role
-        </li>
+        <li>🔊 Volume, Queue, and Playlist Controls with a customizable DJ role</li>
       </ul>
     </section>
     <section>
@@ -60,19 +64,11 @@
         <li><code>/play &lt;song name or URL&gt;</code> to start listening!</li>
         <li>Check <code>/help</code> for all commands.</li>
       </ol>
-      <a
-        href="https://discord.com/oauth2/authorize?client_id=1391544190487367822"
-        class="cta"
-        id="invite-button"
-      >
+      <a href="https://discord.com/oauth2/authorize?client_id=1391544190487367822" class="cta" id="invite-button">
         Invite Now
       </a>
-      <a 
-      href="https://buymeacoffee.com/v3nomoz"
-      class="cta"
-      id= "donate-button"
-    >
-      Donate
+      <a href="https://buymeacoffee.com/v3nomoz" class="cta" id="donate-button">
+        Donate
       </a>
     </section>
     <section>
@@ -80,16 +76,32 @@
       <ul>
         <li>
           Discord:
-          <a href="https://discord.gg/tbnzxAH2yG" target="_blank"
-            >Join Support Server</a
-          >
+          <a href="https://discord.gg/tbnzxAH2yG" target="_blank">Join Support Server</a>
         </li>
       </ul>
     </section>
   </main>
+
   <footer>
     <p>© 2025 Neo Works. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger-btn");
+      const navMenu = document.getElementById("nav-menu");
+      hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("open");
+        hamburger.classList.toggle("open");
+      });
+      document.addEventListener("click", function (event) {
+        if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+          navMenu.classList.remove("open");
+          hamburger.classList.remove("open");
+        }
+      });
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
