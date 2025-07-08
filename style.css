@@ -205,4 +205,54 @@ code {
   margin-top: 1.6rem;
   margin-bottom: 0.6rem;
   font-size: 1.15rem;
-  box-shadow: 0 
+  box-shadow: 0 1px 6px rgba(255, 215, 0, 0.12);
+}
+
+.cta:hover:not(.disabled) {
+  background: #ffe47b;
+  color: #232530;
+}
+
+.cta.disabled {
+  pointer-events: none;
+  background: #c0c0c0;
+  color: #666;
+  opacity: 0.6;
+}
+
+/* --- Updated Maintenance Banner --- */
+.maintenance-banner {
+  position: relative;
+  top: 12px;
+  background: #ff3333;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  margin: 1.2rem auto 0.7rem auto;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 1.08rem;
+  max-width: 680px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+/* --- End Maintenance Banner --- */
+
+footer {
+  text-align: center;
+  padding: 1.1rem 0 1.2rem 0;
+  background: var(--feature-bg);
+  color: #aaa;
+  font-size: 0.98rem;
+  margin-top: 2rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #ffe47b;
+}
