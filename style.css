@@ -27,6 +27,7 @@ body {
   z-index: 10;
   min-height: 56px;
 }
+
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -36,10 +37,10 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 1rem;
   z-index: 20;
 }
+
 .hamburger span {
   display: block;
   width: 28px;
@@ -49,15 +50,19 @@ body {
   border-radius: 2px;
   transition: 0.3s;
 }
+
 .hamburger.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+
 .nav-menu {
   position: absolute;
   top: 56px;
@@ -70,14 +75,17 @@ body {
   align-items: flex-start;
   padding: 0.8rem 0;
 }
+
 .nav-menu.open {
   display: flex;
   animation: menu-fade-in 0.17s;
 }
+
 @keyframes menu-fade-in {
   from { opacity: 0; transform: translateY(-10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
 .nav-link {
   display: block;
   padding: 0.8rem 2rem;
@@ -87,6 +95,7 @@ body {
   font-size: 1.13rem;
   transition: background 0.2s, color 0.2s;
 }
+
 .nav-link:hover,
 .nav-link-active {
   background: #1a1b22;
@@ -196,48 +205,4 @@ code {
   margin-top: 1.6rem;
   margin-bottom: 0.6rem;
   font-size: 1.15rem;
-  box-shadow: 0 1px 6px rgba(255, 215, 0, 0.12);
-}
-
-.cta:hover:not(.disabled) {
-  background: #ffe47b;
-  color: #232530;
-}
-
-.cta.disabled {
-  pointer-events: none;
-  background: #c0c0c0;
-  color: #666;
-  opacity: 0.6;
-}
-
-.maintenance-banner {
-  background: #ff3333;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  margin: 1.5rem 0 0.7rem 0;
-  border-radius: 6px;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 0.5px;
-  font-size: 1.08rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1.1rem 0 1.2rem 0;
-  background: var(--feature-bg);
-  color: #aaa;
-  font-size: 0.98rem;
-  margin-top: 2rem;
-}
-
-a {
-  color: var(--primary);
-  text-decoration: underline;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: #ffe47b;
-}
+  box-shadow: 0 
