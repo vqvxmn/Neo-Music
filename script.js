@@ -1,26 +1,41 @@
-// Theme toggling logic
-const themeToggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
+document.addEventListener("DOMContentLoaded", () => {
+  // Theme toggle logic
+  const themeToggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
 
-// Always use dark theme by default if no preference is set
-function setTheme(theme) {
-  html.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-  themeToggle.textContent = theme === 'dark' ? '🌙' : '☀️';
-}
+  // Load saved theme or default to dark
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  html.setAttribute("data-theme", savedTheme);
 
-function toggleTheme() {
-  const current = html.getAttribute('data-theme');
-  setTheme(current === 'dark' ? 'light' : 'dark');
-}
-
-themeToggle.addEventListener('click', toggleTheme);
-
-(function() {
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark' || saved === 'light') {
-    setTheme(saved);
-  } else {
-    setTheme('dark');
+  // Update toggle icon
+  function updateThemeIcon(theme) {
+    if (themeToggle) {
+      themeToggle.textContent = theme === "dark" ? "🌙" : "☀️";
+    }
   }
-})();
+  updateThemeIcon(savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current = html.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      updateThemeIcon(next);
+    });
+  }
+
+  // Maintenance mode logic
+  const maintenanceMode = true; // Set to true if you want maintenance mode on
+  if (maintenanceMode) {
+    const banner = document.getElementById("maintenance-banner");
+    if (banner) banner.style.display = "block";
+    const btn = document.getElementById("invite-button");
+    if (btn) {
+      btn.classList.add("disabled");
+      btn.removeAttribute("href");
+      btn.textContent = "Unavailable";
+      // NOTE: The button remains visible! Only visually faded and unclickable.
+    }
+  }
+});
