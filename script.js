@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Maintenance mode logic
-  const maintenanceMode = true; // Set to true if you want maintenance mode on
+  const maintenanceMode = false; // Set to true if you want maintenance mode on
   if (maintenanceMode) {
     const banner = document.getElementById("maintenance-banner");
     if (banner) banner.style.display = "block";
