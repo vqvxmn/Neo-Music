@@ -220,14 +220,12 @@ code {
   opacity: 0.6;
 }
 
-/* --- Updated Maintenance Banner --- */
+/* --- Maintenance Banner (pushed well below navbar) --- */
 .maintenance-banner {
-  position: relative;
-  top: 12px;
   background: #ff3333;
   color: #fff;
   padding: 0.8rem 1.2rem;
-  margin: 1.2rem auto 0.7rem auto;
+  margin: 4rem auto 1rem auto;
   border-radius: 6px;
   font-weight: bold;
   text-align: center;
