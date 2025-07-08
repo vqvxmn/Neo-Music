@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -78,7 +78,9 @@
     <p>© 2025 Neo Works. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
   <script>
+    // Set to true if you want maintenance mode on
     const maintenanceMode = true;
 
     if (maintenanceMode) {
@@ -88,6 +90,7 @@
         btn.classList.add("disabled");
         btn.removeAttribute("href");
         btn.textContent = "Unavailable";
+        // NOTE: The button remains visible! Only visually faded and unclickable.
       });
     }
   </script>
